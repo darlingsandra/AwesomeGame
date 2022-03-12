@@ -15,3 +15,9 @@ enum TypePlayer {
     case computer
     case hyman
 }
+
+enum StepGame {
+    case enterNumber
+    case computerGame
+    case hymanGame
+}

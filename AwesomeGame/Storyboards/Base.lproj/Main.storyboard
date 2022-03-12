@@ -89,20 +89,133 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="T8y-uk-JGr">
+                                <rect key="frame" x="16" y="44" width="288" height="441"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AM7-Z7-TJD">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="341"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="y7f-ht-rj6">
+                                                <rect key="frame" x="61" y="0.0" width="166" height="61"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try № 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sep-rz-yP5">
+                                                        <rect key="frame" x="53.5" y="0.0" width="59.5" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computer is guessing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7s-9T-EWJ">
+                                                        <rect key="frame" x="0.0" y="40.5" width="166" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your number is - 80 ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IAS-f0-9yH">
+                                                <rect key="frame" x="62" y="61" width="164" height="280"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="RLo-WI-D0b">
+                                        <rect key="frame" x="0.0" y="341" width="288" height="100"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My number is ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LeP-gR-ul0">
+                                                <rect key="frame" x="46" y="0.0" width="196" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="AbQ-iO-DOB">
+                                                <rect key="frame" x="46" y="40" width="196" height="60"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVJ-xu-RdT" customClass="CompareButton" customModule="AwesomeGame" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                        <color key="backgroundColor" red="0.61960792539999998" green="0.61960786580000005" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="60" id="70a-EE-r1h"/>
+                                                            <constraint firstAttribute="width" constant="60" id="uXl-UG-Byt"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="&gt;">
+                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="greaterButtonPressed" destination="A60-Kp-mdv" eventType="touchUpInside" id="KuX-NQ-FdN"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTq-ti-xvy" customClass="CompareButton" customModule="AwesomeGame" customModuleProvider="target">
+                                                        <rect key="frame" x="68" y="0.0" width="60" height="60"/>
+                                                        <color key="backgroundColor" red="0.61960792539999998" green="0.61960786580000005" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="D4E-e4-2M7"/>
+                                                            <constraint firstAttribute="height" constant="60" id="NHd-DU-08k"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="=">
+                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="equallyButtonPressed" destination="A60-Kp-mdv" eventType="touchUpInside" id="i2x-NK-BEG"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bV-Ht-Pgv" customClass="CompareButton" customModule="AwesomeGame" customModuleProvider="target">
+                                                        <rect key="frame" x="136" y="0.0" width="60" height="60"/>
+                                                        <color key="backgroundColor" red="0.61960792539999998" green="0.61960786580000005" blue="0.61960786580000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="60" id="Eyx-WN-dZL"/>
+                                                            <constraint firstAttribute="height" constant="60" id="XQP-81-mBM"/>
+                                                        </constraints>
+                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                        <state key="normal" title="&lt;">
+                                                            <color key="titleColor" systemColor="labelColor"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="lessButtonPressed" destination="A60-Kp-mdv" eventType="touchUpInside" id="aun-wU-WMd"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="LeP-gR-ul0" firstAttribute="width" secondItem="AbQ-iO-DOB" secondAttribute="width" id="J3P-vZ-83b"/>
+                                            <constraint firstAttribute="height" constant="100" id="r61-vU-6gw"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lxt-QI-4tT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Iyh-kM-fbJ" firstAttribute="top" secondItem="lxt-QI-4tT" secondAttribute="top" constant="90" id="4YN-1O-Wuu"/>
+                            <constraint firstItem="T8y-uk-JGr" firstAttribute="top" secondItem="lxt-QI-4tT" secondAttribute="top" id="Da6-hY-ygL"/>
+                            <constraint firstItem="lxt-QI-4tT" firstAttribute="bottom" secondItem="T8y-uk-JGr" secondAttribute="bottom" constant="34" id="JbW-Lq-SEX">
+                                <variation key="heightClass=compact-widthClass=compact" constant="16"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="16"/>
+                            </constraint>
+                            <constraint firstItem="lxt-QI-4tT" firstAttribute="trailing" secondItem="T8y-uk-JGr" secondAttribute="trailing" constant="16" id="Ocs-aA-75y"/>
                             <constraint firstItem="Iyh-kM-fbJ" firstAttribute="leading" secondItem="lxt-QI-4tT" secondAttribute="leading" constant="16" id="Qvv-R3-BUX"/>
+                            <constraint firstItem="y7f-ht-rj6" firstAttribute="width" secondItem="ogN-qF-F70" secondAttribute="height" multiplier="83:284" id="R2X-Tj-s2x"/>
+                            <constraint firstItem="T8y-uk-JGr" firstAttribute="leading" secondItem="lxt-QI-4tT" secondAttribute="leading" constant="16" id="TXz-3d-PKn"/>
                             <constraint firstItem="lxt-QI-4tT" firstAttribute="trailing" secondItem="Iyh-kM-fbJ" secondAttribute="trailing" constant="16" id="fWv-Wj-jan"/>
                             <constraint firstItem="lxt-QI-4tT" firstAttribute="bottom" secondItem="Iyh-kM-fbJ" secondAttribute="bottom" constant="16" id="xW8-bp-g3g"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RnB-ue-zlB"/>
                     <connections>
+                        <outlet property="computerGameStackView" destination="T8y-uk-JGr" id="99q-V9-Dsf"/>
+                        <outlet property="countTriesComputerLabel" destination="sep-rz-yP5" id="Leb-q1-xa5"/>
                         <outlet property="enterNumberButton" destination="Bsa-bW-Wy6" id="r5d-hC-aEw"/>
+                        <outlet property="enterNumberStackView" destination="Iyh-kM-fbJ" id="yB9-ix-kSD"/>
                         <outlet property="enterNumberTF" destination="nLW-60-zwt" id="jda-5v-fhe"/>
+                        <outlet property="equallyButton" destination="mTq-ti-xvy" id="Tdu-Mx-pPw"/>
+                        <outlet property="greaterButton" destination="TVJ-xu-RdT" id="cnE-il-49k"/>
+                        <outlet property="lessButton" destination="5bV-Ht-Pgv" id="lom-Ix-dKA"/>
+                        <outlet property="numberComputerLabel" destination="IAS-f0-9yH" id="dSO-kh-oJX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysR-cN-CDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -133,6 +246,9 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
