@@ -30,10 +30,14 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="sNV-Vs-ks4"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Start New Game">
                                     <color key="titleColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="qK3-kM-Lk9" kind="presentation" modalPresentationStyle="fullScreen" id="GHO-kP-ZoC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -51,6 +55,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="127.5" y="81.338028169014081"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="h3p-vm-HB4">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="A60-Kp-mdv" customClass="GameViewController" customModule="AwesomeGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ogN-qF-F70">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="Iyh-kM-fbJ">
+                                <rect key="frame" x="16" y="134" width="288" height="369"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Guess the number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nLW-60-zwt">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsa-bW-Wy6" customClass="MainButton" customModule="AwesomeGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="324" width="288" height="45"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="g74-vJ-VMi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Enter the Number">
+                                            <color key="titleColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="enterNumberButtonPressed" destination="A60-Kp-mdv" eventType="touchUpInside" id="eY9-tD-dIU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lxt-QI-4tT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Iyh-kM-fbJ" firstAttribute="top" secondItem="lxt-QI-4tT" secondAttribute="top" constant="90" id="4YN-1O-Wuu"/>
+                            <constraint firstItem="Iyh-kM-fbJ" firstAttribute="leading" secondItem="lxt-QI-4tT" secondAttribute="leading" constant="16" id="Qvv-R3-BUX"/>
+                            <constraint firstItem="lxt-QI-4tT" firstAttribute="trailing" secondItem="Iyh-kM-fbJ" secondAttribute="trailing" constant="16" id="fWv-Wj-jan"/>
+                            <constraint firstItem="lxt-QI-4tT" firstAttribute="bottom" secondItem="Iyh-kM-fbJ" secondAttribute="bottom" constant="16" id="xW8-bp-g3g"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RnB-ue-zlB"/>
+                    <connections>
+                        <outlet property="enterNumberButton" destination="Bsa-bW-Wy6" id="r5d-hC-aEw"/>
+                        <outlet property="enterNumberTF" destination="nLW-60-zwt" id="jda-5v-fhe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ysR-cN-CDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1626" y="80"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bBB-X0-Jf3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" toolbarHidden="NO" id="qK3-kM-Lk9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="P5I-sF-9w0"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eEU-fn-LgX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="A60-Kp-mdv" kind="relationship" relationship="rootViewController" id="aHB-vz-G3T"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JNh-U2-t4O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="871.875" y="80.281690140845072"/>
         </scene>
     </scenes>
     <resources>
