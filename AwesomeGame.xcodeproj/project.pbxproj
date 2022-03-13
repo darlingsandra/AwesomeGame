@@ -17,6 +17,7 @@
 		F575534E27DB7F100003C7DF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F575534D27DB7F100003C7DF /* GameViewController.swift */; };
 		F575535227DC79DA0003C7DF /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = F575535127DC79DA0003C7DF /* Player.swift */; };
 		F575535527DC84F30003C7DF /* CompareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F575535427DC84F30003C7DF /* CompareButton.swift */; };
+		F575535727DDD8460003C7DF /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F575535627DDD8460003C7DF /* ScoresViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F575534D27DB7F100003C7DF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		F575535127DC79DA0003C7DF /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F575535427DC84F30003C7DF /* CompareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareButton.swift; sourceTree = "<group>"; };
+		F575535627DDD8460003C7DF /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 		F516492B27DB623B0097DB63 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				F575535627DDD8460003C7DF /* ScoresViewController.swift */,
 				F575534D27DB7F100003C7DF /* GameViewController.swift */,
 				F516491927DB5F0B0097DB63 /* StartViewController.swift */,
 			);
@@ -201,6 +204,7 @@
 				F575534E27DB7F100003C7DF /* GameViewController.swift in Sources */,
 				F516492E27DB67B50097DB63 /* MainButton.swift in Sources */,
 				F516491A27DB5F0B0097DB63 /* StartViewController.swift in Sources */,
+				F575535727DDD8460003C7DF /* ScoresViewController.swift in Sources */,
 				F575535527DC84F30003C7DF /* CompareButton.swift in Sources */,
 				F516491627DB5F0B0097DB63 /* AppDelegate.swift in Sources */,
 				F575535227DC79DA0003C7DF /* Player.swift in Sources */,

@@ -49,6 +49,12 @@ class GameViewController: UIViewController {
         self.view.endEditing(false)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let scoresVC = segue.destination as? ScoresViewController else { return }
+        scoresVC.playerHuman = playerHuman
+        scoresVC.playerComputer = playerComputer
+    }
+    
     @IBAction func enterNumberButtonPressed() {
         guard let text = enterNumberTF.text, let number = Int(text) else { return }
         playerHuman.number = number
@@ -71,6 +77,9 @@ class GameViewController: UIViewController {
         
     @IBAction func equallyButtonPressed() {
         playerComputer.number = defaultRange.randomElement() ?? 1
+        
+        print("Число: \(playerComputer.number)")
+        
         playerHuman.countTries += 1
         currentGuessNumber = 0
         currentStepGame = .humanGame
@@ -81,9 +90,10 @@ class GameViewController: UIViewController {
     @IBAction func guessNumberButtonPressed() {
         guard let text = guessNumberTF.text, let number = Int(text), defaultRange.contains(number) else { return }
         currentGuessNumber = number
-        if playerComputer.number != currentGuessNumber {
-            playerHuman.countTries += 1
+        if playerComputer.number == currentGuessNumber {
+            performSegue(withIdentifier: "showScores", sender: nil)
         }
+        playerHuman.countTries += 1
         updateHumanGameView()
     }
     

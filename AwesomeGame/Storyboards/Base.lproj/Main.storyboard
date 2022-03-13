@@ -278,11 +278,95 @@
                         <outlet property="humanGameStackView" destination="GMg-zT-cg4" id="G1d-QA-aNX"/>
                         <outlet property="lessButton" destination="5bV-Ht-Pgv" id="lom-Ix-dKA"/>
                         <outlet property="numberComputerLabel" destination="IAS-f0-9yH" id="dSO-kh-oJX"/>
+                        <segue destination="vex-96-lxE" kind="presentation" identifier="showScores" modalPresentationStyle="fullScreen" id="qJw-SN-pCV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysR-cN-CDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1626" y="80"/>
+        </scene>
+        <!--Scores View Controller-->
+        <scene sceneID="9L1-ot-A9X">
+            <objects>
+                <viewController id="vex-96-lxE" customClass="ScoresViewController" customModule="AwesomeGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gjP-ZN-bmB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="jjq-7h-zXU">
+                                <rect key="frame" x="16" y="16" width="288" height="487"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scores:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OZh-e9-buv">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="RKn-Pa-W22">
+                                        <rect key="frame" x="0.0" y="134" width="288" height="61"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your's ties count: 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFe-yr-PJA">
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Computers's tries count: 8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WQL-vr-e2U">
+                                                <rect key="frame" x="0.0" y="40.5" width="288" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="WOP-MN-dVv"/>
+                                        </constraints>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Win" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLv-kl-rG9">
+                                        <rect key="frame" x="0.0" y="308" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1tN-ld-xOl" customClass="MainButton" customModule="AwesomeGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="442" width="288" height="45"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="jhB-iA-AuM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Main menu">
+                                            <color key="titleColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessNumberButtonPressed" destination="A60-Kp-mdv" eventType="touchUpInside" id="hNi-G0-QFp"/>
+                                            <segue destination="o6s-Ps-CVk" kind="unwind" unwindAction="unwindWithSegue:" id="o9J-Q0-jf3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FJB-p4-JoA"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jjq-7h-zXU" firstAttribute="top" secondItem="FJB-p4-JoA" secondAttribute="top" constant="16" id="MSY-kr-Mex"/>
+                            <constraint firstItem="FJB-p4-JoA" firstAttribute="trailing" secondItem="jjq-7h-zXU" secondAttribute="trailing" constant="16" id="Q4F-Xi-uGg"/>
+                            <constraint firstItem="FJB-p4-JoA" firstAttribute="bottom" secondItem="jjq-7h-zXU" secondAttribute="bottom" constant="65" id="aA6-25-lQf"/>
+                            <constraint firstItem="FJB-p4-JoA" firstAttribute="leading" secondItem="jjq-7h-zXU" secondAttribute="leading" constant="-16" id="kXh-Q2-18t"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jRZ-bD-auu"/>
+                    <connections>
+                        <outlet property="resultGameLabel" destination="kLv-kl-rG9" id="tq1-gy-T1I"/>
+                        <outlet property="triesCountComputerLabel" destination="WQL-vr-e2U" id="Wf0-Qt-F2e"/>
+                        <outlet property="triesCountHumanLabel" destination="GFe-yr-PJA" id="heU-B3-ydH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H69-2C-cka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="o6s-Ps-CVk" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2428" y="81"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bBB-X0-Jf3">
