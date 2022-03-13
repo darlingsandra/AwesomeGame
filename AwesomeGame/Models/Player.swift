@@ -13,11 +13,11 @@ struct Player {
 
 enum TypePlayer {
     case computer
-    case hyman
+    case human
 }
 
 enum StepGame {
     case enterNumber
     case computerGame
-    case hymanGame
+    case humanGame
 }

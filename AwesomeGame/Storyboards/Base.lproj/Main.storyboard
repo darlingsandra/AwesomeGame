@@ -187,12 +187,64 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="55" translatesAutoresizingMaskIntoConstraints="NO" id="GMg-zT-cg4">
+                                <rect key="frame" x="16" y="84" width="288" height="329.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="4aS-RO-6qy">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="65"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Try № 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7W7-9B-ndu">
+                                                <rect key="frame" x="113" y="0.0" width="62" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are guessing" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SEA-ib-YSs">
+                                                <rect key="frame" x="79" y="44.5" width="130" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aEj-Jc-30d">
+                                        <rect key="frame" x="0.0" y="120" width="288" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uK2-Zd-Blw" customClass="MainButton" customModule="AwesomeGame" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="209" width="288" height="45"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="xN5-Sd-yHt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Guess">
+                                            <color key="titleColor" red="1" green="1" blue="0.99999994039999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="guessNumberButtonPressed" destination="A60-Kp-mdv" eventType="touchUpInside" id="ZrG-Q3-iMp"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No, my number is less then yours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SSu-OO-vJc">
+                                        <rect key="frame" x="0.0" y="309" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="20"/>
+                                <variation key="heightClass=compact-widthClass=regular" spacing="30"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lxt-QI-4tT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Iyh-kM-fbJ" firstAttribute="top" secondItem="lxt-QI-4tT" secondAttribute="top" constant="90" id="4YN-1O-Wuu"/>
                             <constraint firstItem="T8y-uk-JGr" firstAttribute="top" secondItem="lxt-QI-4tT" secondAttribute="top" id="Da6-hY-ygL"/>
+                            <constraint firstItem="lxt-QI-4tT" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GMg-zT-cg4" secondAttribute="bottom" constant="16" id="FWI-OX-Bte"/>
+                            <constraint firstItem="GMg-zT-cg4" firstAttribute="leading" secondItem="lxt-QI-4tT" secondAttribute="leading" constant="16" id="IDo-dU-RF9"/>
                             <constraint firstItem="lxt-QI-4tT" firstAttribute="bottom" secondItem="T8y-uk-JGr" secondAttribute="bottom" constant="34" id="JbW-Lq-SEX">
                                 <variation key="heightClass=compact-widthClass=compact" constant="16"/>
                                 <variation key="heightClass=compact-widthClass=regular" constant="16"/>
@@ -200,7 +252,12 @@
                             <constraint firstItem="lxt-QI-4tT" firstAttribute="trailing" secondItem="T8y-uk-JGr" secondAttribute="trailing" constant="16" id="Ocs-aA-75y"/>
                             <constraint firstItem="Iyh-kM-fbJ" firstAttribute="leading" secondItem="lxt-QI-4tT" secondAttribute="leading" constant="16" id="Qvv-R3-BUX"/>
                             <constraint firstItem="y7f-ht-rj6" firstAttribute="width" secondItem="ogN-qF-F70" secondAttribute="height" multiplier="83:284" id="R2X-Tj-s2x"/>
+                            <constraint firstItem="GMg-zT-cg4" firstAttribute="top" secondItem="lxt-QI-4tT" secondAttribute="top" constant="40" id="Suk-B0-5uU">
+                                <variation key="heightClass=compact-widthClass=compact" constant="16"/>
+                                <variation key="heightClass=compact-widthClass=regular" constant="16"/>
+                            </constraint>
                             <constraint firstItem="T8y-uk-JGr" firstAttribute="leading" secondItem="lxt-QI-4tT" secondAttribute="leading" constant="16" id="TXz-3d-PKn"/>
+                            <constraint firstItem="lxt-QI-4tT" firstAttribute="trailing" secondItem="GMg-zT-cg4" secondAttribute="trailing" constant="16" id="eZ8-Gw-kkL"/>
                             <constraint firstItem="lxt-QI-4tT" firstAttribute="trailing" secondItem="Iyh-kM-fbJ" secondAttribute="trailing" constant="16" id="fWv-Wj-jan"/>
                             <constraint firstItem="lxt-QI-4tT" firstAttribute="bottom" secondItem="Iyh-kM-fbJ" secondAttribute="bottom" constant="16" id="xW8-bp-g3g"/>
                         </constraints>
@@ -209,11 +266,16 @@
                     <connections>
                         <outlet property="computerGameStackView" destination="T8y-uk-JGr" id="99q-V9-Dsf"/>
                         <outlet property="countTriesComputerLabel" destination="sep-rz-yP5" id="Leb-q1-xa5"/>
+                        <outlet property="countTriesHumanLabel" destination="7W7-9B-ndu" id="MrG-jc-rfa"/>
                         <outlet property="enterNumberButton" destination="Bsa-bW-Wy6" id="r5d-hC-aEw"/>
                         <outlet property="enterNumberStackView" destination="Iyh-kM-fbJ" id="yB9-ix-kSD"/>
                         <outlet property="enterNumberTF" destination="nLW-60-zwt" id="jda-5v-fhe"/>
                         <outlet property="equallyButton" destination="mTq-ti-xvy" id="Tdu-Mx-pPw"/>
                         <outlet property="greaterButton" destination="TVJ-xu-RdT" id="cnE-il-49k"/>
+                        <outlet property="guessNumberButton" destination="uK2-Zd-Blw" id="8NL-Zj-4Q9"/>
+                        <outlet property="guessNumberLabel" destination="SSu-OO-vJc" id="onv-xT-pto"/>
+                        <outlet property="guessNumberTF" destination="aEj-Jc-30d" id="bQ6-QM-y9U"/>
+                        <outlet property="humanGameStackView" destination="GMg-zT-cg4" id="G1d-QA-aNX"/>
                         <outlet property="lessButton" destination="5bV-Ht-Pgv" id="lom-Ix-dKA"/>
                         <outlet property="numberComputerLabel" destination="IAS-f0-9yH" id="dSO-kh-oJX"/>
                     </connections>

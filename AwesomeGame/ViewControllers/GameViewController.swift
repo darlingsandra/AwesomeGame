@@ -13,6 +13,7 @@ class GameViewController: UIViewController {
     
     @IBOutlet weak var enterNumberStackView: UIStackView!
     @IBOutlet weak var computerGameStackView: UIStackView!
+    @IBOutlet weak var humanGameStackView: UIStackView!
     
     @IBOutlet weak var countTriesComputerLabel: UILabel!
     @IBOutlet weak var numberComputerLabel: UILabel!
@@ -21,20 +22,27 @@ class GameViewController: UIViewController {
     @IBOutlet weak var equallyButton: CompareButton!
     @IBOutlet weak var lessButton: CompareButton!
     
+    @IBOutlet weak var countTriesHumanLabel: UILabel!
+    @IBOutlet weak var guessNumberLabel: UILabel!
+    @IBOutlet weak var guessNumberButton: MainButton!
+    @IBOutlet weak var guessNumberTF: UITextField!
+    
     private let defaultRange = 1...100
     private var currentRange = 1...100
     
     private var currentStepGame: StepGame = .enterNumber
     private var currentGuessNumber: Int = 0
     
-    private var playerHyman = Player(type: .hyman)
+    private var playerHuman = Player(type: .human)
     private var playerComputer = Player(type: .computer)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         enterNumberTF.delegate = self
+        guessNumberTF.delegate = self
         updateUI()
         updateViewButton(textField: enterNumberTF, button: enterNumberButton)
+        updateViewButton(textField: guessNumberTF, button: guessNumberButton)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -43,7 +51,7 @@ class GameViewController: UIViewController {
     
     @IBAction func enterNumberButtonPressed() {
         guard let text = enterNumberTF.text, let number = Int(text) else { return }
-        playerHyman.number = number
+        playerHuman.number = number
         
         currentStepGame = .computerGame
         updateUI()
@@ -62,6 +70,21 @@ class GameViewController: UIViewController {
     }
         
     @IBAction func equallyButtonPressed() {
+        playerComputer.number = defaultRange.randomElement() ?? 1
+        playerHuman.countTries += 1
+        currentGuessNumber = 0
+        currentStepGame = .humanGame
+        updateUI()
+        updateHumanGameView()
+    }
+    
+    @IBAction func guessNumberButtonPressed() {
+        guard let text = guessNumberTF.text, let number = Int(text), defaultRange.contains(number) else { return }
+        currentGuessNumber = number
+        if playerComputer.number != currentGuessNumber {
+            playerHuman.countTries += 1
+        }
+        updateHumanGameView()
     }
     
 }
@@ -74,7 +97,7 @@ extension GameViewController {
     }
     
     private func updateUI(){
-        for stackView in [enterNumberStackView, computerGameStackView] {
+        for stackView in [enterNumberStackView, computerGameStackView, humanGameStackView] {
             stackView?.isHidden = true
         }
         
@@ -83,8 +106,8 @@ extension GameViewController {
             enterNumberStackView.isHidden.toggle()
         case .computerGame:
             computerGameStackView.isHidden.toggle()
-        case .hymanGame:
-            computerGameStackView.isHidden.toggle()
+        case .humanGame:
+            humanGameStackView.isHidden.toggle()
         }
     }
     
@@ -96,16 +119,33 @@ extension GameViewController {
             button!.isEnabled = false
         }
         
-        if currentGuessNumber < playerHyman.number {
+        if currentGuessNumber < playerHuman.number {
             greaterButton.isEnabled.toggle()
         }
         
-        if currentGuessNumber > playerHyman.number {
+        if currentGuessNumber > playerHuman.number {
             lessButton.isEnabled.toggle()
         }
         
-        if currentGuessNumber == playerHyman.number {
+        if currentGuessNumber == playerHuman.number {
             equallyButton.isEnabled.toggle()
+        }
+    }
+    
+    private func updateHumanGameView() {
+        countTriesHumanLabel.text = "Try № \(playerHuman.countTries)"
+        guessNumberLabel.isHidden = currentGuessNumber == 0 ? true : false
+        
+        if playerComputer.number < currentGuessNumber {
+            guessNumberLabel.text = "No, my number is less then yours"
+        }
+        
+        if playerComputer.number > currentGuessNumber {
+            guessNumberLabel.text = "No, my number is graeter then yours"
+        }
+        
+        if playerComputer.number == currentGuessNumber {
+            guessNumberLabel.text = "Yes, my number is equally yours"
         }
     }
         
@@ -146,6 +186,10 @@ extension GameViewController: UITextFieldDelegate {
         
         if textField == enterNumberTF {
             updateViewButton(textField: textField, button: enterNumberButton)
+        }
+        
+        if textField == guessNumberTF {
+            updateViewButton(textField: textField, button: guessNumberButton)
         }
     }
     
