@@ -6,12 +6,12 @@
 //
 
 struct Player {
-    let type: TypePlayer
+    let type: PlayerType
     var number: Int = 0
-    var countTries: Int = 0
+    var triesCount: Int = 0
 }
 
-enum TypePlayer {
+enum PlayerType {
     case computer
     case human
 }

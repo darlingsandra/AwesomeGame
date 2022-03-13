@@ -23,20 +23,21 @@ class ScoresViewController: UIViewController {
     }
     
     private func updateUI() {
-        triesCountHumanLabel.text = "Your's ties count: \(playerHuman.countTries)"
-        triesCountComputerLabel.text = "Computers's tries count: \(playerComputer.countTries)"
+        triesCountHumanLabel.text = "Your's ties count: \(playerHuman.triesCount)"
+        triesCountComputerLabel.text = "Computers's tries count: \(playerComputer.triesCount)"
         
-        if playerHuman.countTries < playerComputer.countTries {
-            resultGameLabel.text = "You Win"
+        var result = "Draw"
+
+        
+        if playerHuman.triesCount < playerComputer.triesCount {
+            result = "You Win"
         }
         
-        if playerHuman.countTries > playerComputer.countTries {
-            resultGameLabel.text = "You fail"
+        if playerHuman.triesCount > playerComputer.triesCount {
+            result = "You fail"
         }
         
-        if playerHuman.countTries == playerComputer.countTries {
-            resultGameLabel.text = "Draw"
-        }
+        resultGameLabel.text = result
     }
     
 }

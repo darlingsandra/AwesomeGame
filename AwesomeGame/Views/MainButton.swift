@@ -10,21 +10,23 @@ import UIKit
 class MainButton: UIButton {
     override var isEnabled: Bool {
         didSet {
-            backgroundColor = isEnabled ? backgroundColor?.withAlphaComponent(1) :  backgroundColor?.withAlphaComponent(0.3)
+            backgroundColor = isEnabled
+                ? backgroundColor?.withAlphaComponent(1)
+                : backgroundColor?.withAlphaComponent(0.3)
         }
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setStyleCustom()
+        setCustomStyle()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setStyleCustom()
+        setCustomStyle()
     }
     
-    func setStyleCustom() {
+    func setCustomStyle() {
         self.layer.cornerRadius = self.frame.size.height / 3
         self.backgroundColor = .blue
         self.setTitleColor(.white, for: .normal)

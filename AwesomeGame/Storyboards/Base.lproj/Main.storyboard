@@ -265,8 +265,6 @@
                     <navigationItem key="navigationItem" id="RnB-ue-zlB"/>
                     <connections>
                         <outlet property="computerGameStackView" destination="T8y-uk-JGr" id="99q-V9-Dsf"/>
-                        <outlet property="countTriesComputerLabel" destination="sep-rz-yP5" id="Leb-q1-xa5"/>
-                        <outlet property="countTriesHumanLabel" destination="7W7-9B-ndu" id="MrG-jc-rfa"/>
                         <outlet property="enterNumberButton" destination="Bsa-bW-Wy6" id="r5d-hC-aEw"/>
                         <outlet property="enterNumberStackView" destination="Iyh-kM-fbJ" id="yB9-ix-kSD"/>
                         <outlet property="enterNumberTF" destination="nLW-60-zwt" id="jda-5v-fhe"/>
@@ -278,6 +276,8 @@
                         <outlet property="humanGameStackView" destination="GMg-zT-cg4" id="G1d-QA-aNX"/>
                         <outlet property="lessButton" destination="5bV-Ht-Pgv" id="lom-Ix-dKA"/>
                         <outlet property="numberComputerLabel" destination="IAS-f0-9yH" id="dSO-kh-oJX"/>
+                        <outlet property="teiesCountComputerLabel" destination="sep-rz-yP5" id="Leb-q1-xa5"/>
+                        <outlet property="triesCountHumanLabel" destination="7W7-9B-ndu" id="MrG-jc-rfa"/>
                         <segue destination="vex-96-lxE" kind="presentation" identifier="showScores" modalPresentationStyle="fullScreen" id="qJw-SN-pCV"/>
                     </connections>
                 </viewController>

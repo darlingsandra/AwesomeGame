@@ -10,22 +10,21 @@ import UIKit
 class CompareButton: UIButton {
     override var isEnabled: Bool {
         didSet {
-            //backgroundColor = isEnabled ? backgroundColor?.withAlphaComponent(1) :  backgroundColor?.withAlphaComponent(0.3)
             backgroundColor = isEnabled ? .white : .lightGray
         }
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setStyleCustom()
+        setCustomStyle()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setStyleCustom()
+        setCustomStyle()
     }
     
-    func setStyleCustom() {
+    func setCustomStyle() {
         self.layer.cornerRadius = self.frame.size.height / 4
         self.layer.borderWidth = 1
         self.layer.borderColor = CGColor(red: 0, green: 0, blue: 0, alpha: 1)
