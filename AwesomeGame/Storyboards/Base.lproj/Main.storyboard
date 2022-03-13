@@ -276,7 +276,7 @@
                         <outlet property="humanGameStackView" destination="GMg-zT-cg4" id="G1d-QA-aNX"/>
                         <outlet property="lessButton" destination="5bV-Ht-Pgv" id="lom-Ix-dKA"/>
                         <outlet property="numberComputerLabel" destination="IAS-f0-9yH" id="dSO-kh-oJX"/>
-                        <outlet property="teiesCountComputerLabel" destination="sep-rz-yP5" id="Leb-q1-xa5"/>
+                        <outlet property="triesCountComputerLabel" destination="sep-rz-yP5" id="Leb-q1-xa5"/>
                         <outlet property="triesCountHumanLabel" destination="7W7-9B-ndu" id="MrG-jc-rfa"/>
                         <segue destination="vex-96-lxE" kind="presentation" identifier="showScores" modalPresentationStyle="fullScreen" id="qJw-SN-pCV"/>
                     </connections>

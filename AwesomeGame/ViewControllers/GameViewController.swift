@@ -16,7 +16,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var enterNumberButton: MainButton!
     @IBOutlet weak var enterNumberTF: UITextField!
     
-    @IBOutlet weak var teiesCountComputerLabel: UILabel!
+    @IBOutlet weak var triesCountComputerLabel: UILabel!
     @IBOutlet weak var numberComputerLabel: UILabel!
     
     @IBOutlet weak var greaterButton: CompareButton!
@@ -120,7 +120,7 @@ extension GameViewController {
     }
     
     private func updateComputerGameView() {
-        teiesCountComputerLabel.text = "Try № \(playerComputer.triesCount)"
+        triesCountComputerLabel.text = "Try № \(playerComputer.triesCount)"
         numberComputerLabel.text = "Your number is - \(currentGuessNumber) ?"
         
         greaterButton.isEnabled = currentGuessNumber < playerHuman.number
