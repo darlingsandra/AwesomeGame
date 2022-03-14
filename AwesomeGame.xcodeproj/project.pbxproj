@@ -34,6 +34,7 @@
 		F575535127DC79DA0003C7DF /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		F575535427DC84F30003C7DF /* CompareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompareButton.swift; sourceTree = "<group>"; };
 		F575535627DDD8460003C7DF /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
+		F575535827DE10990003C7DF /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +73,7 @@
 				F516492A27DB620B0097DB63 /* Storyboards */,
 				F516492C27DB62650097DB63 /* Resources */,
 				F516492927DB61EA0097DB63 /* App */,
+				F575535827DE10990003C7DF /* README.md */,
 			);
 			path = AwesomeGame;
 			sourceTree = "<group>";
